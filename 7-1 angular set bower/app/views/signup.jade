@@ -1,0 +1,31 @@
+html
+	head
+		title= title
+		link(href='/css/main.css', rel='stylesheet')
+	body
+		each msg in messages
+			div.flash
+				= msg
+		form(name='signup', method='POST', action='/signup')
+			div
+				label(for='username') ຊື່
+				input(name='username', type='text', placeholder='ຊື່')
+			div
+				label(for='firstname') ຊື່ແທ້
+				input(name='firstname', type='text', placeholder='ຊື່ແທ້')
+			div
+				label(for='lastname') ນາມສະກຸນ
+				input(name='lastname', type='text', placeholder='ນາມສະກຸນ')
+			div
+				label(for='email') ອີແມວ
+				input(name='email', type='email', placeholder='ໃສ່ທີ່ຢູ່ອີແມວຂອງທ່ານ')
+			div
+				label(for='password') ລະຫັດຜ່ານ
+				input(name='password', type='password', placeholder='ລະຫັດຜ່ານ')
+			div
+				input(type='submit', value='ສະໝັກສຳມະຊິກ')
+			div
+				a(href='/oauth/facebook') ເຂົ້າລະບົບດ້ວຍ Facebook
+			div
+				a(href='/oauth/google') ເຂົ້າລະບົບດ້ວຍ Google
+		img(src='/img/test.jpg', width='100%', alt='Test') 

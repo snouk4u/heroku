@@ -3,8 +3,8 @@ module.exports = {
 	mongoUri: 'mongodb://localhost/MEAN-Stack',
 	sessionSecret: 'dev_secret_key',
 	facebook: {
-		clientID: '846061102178195',
-		clientSecret: '0df9d54c9423f3fcc2ebe15fbf5fe934',
+		clientID: '554673391364858',
+		clientSecret: 'f2993d30f63b55bce4fc703044584ab6',
 		callbackURL: 'http://localhost:3000/oauth/facebook/callback'
 	},
 	google: {
