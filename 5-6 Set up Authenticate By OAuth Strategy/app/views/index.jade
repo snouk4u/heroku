@@ -1,0 +1,17 @@
+html
+	head
+		title= title
+		link(href='/css/main.css', rel='stylesheet')
+	body
+		if username
+			h2 ສະບາຍດີ ທ່ານ #{username}
+			div
+				form(name='logout', method='POST', action='logout')
+					input(type='submit', value='ອອກ')
+		else
+			div
+				a(href='/signup') ສະໝັກສຳມະຊິກ
+			div
+				a(href='/login') ເຂົ້າລະບົບ
+
+		img(src='/img/test.jpg', width='100%', alt='Test') 

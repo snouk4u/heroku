@@ -1,0 +1,18 @@
+html
+	head
+		title= title
+		link(href='/css/main.css', rel='stylesheet')
+	body
+		each msg in messages
+			div.flash
+				= msg
+		form(name='login', method='POST', action='/login')
+			div
+				label(for='username') ຊື່
+				input(name='username', type='text', placeholder='ຊື່')
+			div
+				label(for='password') ລະຫັດຜ່ານ
+				input(name='password', type='password', placeholder='ລະຫັດຜ່ານ')
+			div
+				input(type='submit', value='ລົງຊື່')
+		img(src='/img/test.jpg', width='100%', alt='Test')
