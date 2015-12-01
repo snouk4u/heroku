@@ -1,0 +1,12 @@
+﻿res.status(code)
+-ຕັ້ງ HTTP status code
+res.set(field, [value])
+-ຕັ້ງ HTTP response header
+res.redirect([status], url)
+-redirect ໄປຍັງ url ທີ່ກຳນົດ ແລະ ສາມາດໃສ່ status code ໄດ້
+res.send([body|status], [body])
+- ສົ່ງຄ່າກັບຄືນ ໂດຍຕັ້ງ Content-Type ອັດຕະໂນມັດ
+res.json([body|status], [body])
+- ເໝືອນກັບ res.send ໂດຍສົ່ງ array ຫຼື object
+res.render(view, [locals], callback)
+-ເລນເດີ້ view ແລະສົ່ງ HTML response

@@ -1,0 +1,12 @@
+﻿Application Object
+//app.get(path, callback)
+//-ສ້າງ middleware ເພື່ອ handle GET request ກັບ path ທທີ່ກຳນົດ
+//app.post(path, callback)
+//-ສ້າງ middleware ເພື່ອ handle POST request ກັບ path ທທີ່ກຳນົດ
+//app.put(path, callback)
+//-ສ້າງ middleware ເພື່ອ handle PUT request ກັບ path ທທີ່ກຳນົດ
+//app.delete(path, callback)
+//-ສ້າງ middleware ເພື່ອ handle DELETE request ກັບ path ທທີ່ກຳນົດ
+//app.route(path)
+	.get(callback)
+	.post(callback)

@@ -1,0 +1,9 @@
+﻿Request Object
+req.query
+- query string ພາລາມິເຕີ້ <http://localhost/page1?key1=value1$key2=value2>
+req.params
+- routing ພາລາມິເຕີ້ <http://localhost/page1/param1/param2
+reg.body
+- ສ່ວນ body ໂດຍໄດ້ມາກັບ moddleware bodyParser()
+req.path, req.host, req.ip
+- request path ປະຈຸບັນ, ຊື່ໂຮສ, ip ຜູ້ສົ່ງ requests
