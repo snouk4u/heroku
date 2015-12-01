@@ -1,0 +1,15 @@
+﻿ໂຄງສ້າງ MVC web Application
+MyProject
+--app
+  --controllers
+  --models
+  --routes
+  --views
+--config
+  --env
+--public
+  --css
+  --img
+  --js
+--pakcage.json
+--server.js
