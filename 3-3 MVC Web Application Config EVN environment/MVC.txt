@@ -1,0 +1,50 @@
+﻿ການ config application ຕາມແຕ່ລະ environment
+1. pakcage.json
+
+{
+	"name" : "MyProject",
+	"version" : "1.0.0",
+	"dependencies" : {
+		"express" : "~4.13.0",
+		"morgan" : "~1.6.0",
+		"compression" : "~1.5.0",
+		"body_parser" : "~1.13.0"
+	}
+}
+
+2. set ENV
+for window CMD
+ສຳລັບພັດທະນາ > set NODE_ENV=development 
+ສຳລັບຜະລິດຕະພັນ> set NODE_ENV=production
+
+<./config/express.js>
+var express = require('express');
+var morgan = require('morgan');
+var compression = require('compression');
+var bodyParser = require('body-parser');
+
+module.exports = function() {
+	var app = express();
+	if (process.env.NODE_ENV === 'development') {
+		app.use(morgan('dev'));
+	} else {
+		app.use(compression);
+	}
+	app.use(bodyParser.urlencoded({
+		extended: true
+	}));
+	app.use(bodyParser.json());
+
+	require('../app/routes/index.routes')(app);
+	return app;
+};
+
+<server.js>
+process.env.NODE_ENV = process.env.NODE_ENV ||'development';
+
+var express = require('./config/express');
+var app = express();
+app.listen(3000);
+module.exports = app;
+
+console.log('Server running at http://localhost:3000');
