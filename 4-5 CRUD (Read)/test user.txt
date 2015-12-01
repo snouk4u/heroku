@@ -1,0 +1,8 @@
+﻿insert:
+curl -X POST -H "Content-Type: Application/json" -d '{"firstName": "First", "lastName": "Last", "username": "myusername", "email": "test@live.com", "password": "password"}' localhost:3000/user
+
+update:
+curl -X PUT -H "Content-Type: Application/json" -d '{"email": "newtest@live.com", "password": "password"}' localhost:3000/user/myusername
+
+delete:
+curl -X DELETE localhost:3000/user/myusername

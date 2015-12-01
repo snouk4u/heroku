@@ -1,0 +1,1 @@
+﻿curl -X POST -H "Content-Type: Application/json" -d '{"firstName": "First", "lastName": "Last", "username": "myusername", "email": "test@live.com", "password": "password"}' localhost:3000/user
